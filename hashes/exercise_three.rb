@@ -4,13 +4,7 @@ family = {  uncles: ["bob", "joe", "steve"],
             aunts: ["mary","sally","susan"]
           }
 
-
-immediate = family.select do |k,v| 
-  k == :sisters || k == :brothers
-  
-end
-
-arr = immediate.values.flatten
-
-p arr
+family.each { |key, values| puts key }
+family.each { |key, values| puts values }
+family.each { |key, values| puts "the keys #{key}, and the values are #{values}" }
 
